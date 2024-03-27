@@ -1,0 +1,32 @@
+{% extends "main/base.html" %}
+{% block title %}autoRelay-Send Messages{% endblock  %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+	<img id="sendImage" src="{% static 'images/sendImage.png' %}" alt="none">
+	<div class="el-container">
+		<p id="S_helpText">Send Messages</p>
+		<form method="POST" enctype="multipart/form-data">
+			 {% csrf_token %} 
+			{{form}}<br>
+			<button id="S_sendBtn" type="submit" name="send" value="send">Send Messages</button>
+			<p id="S_stopBtn" type="submit" name="stop" value="stop" disabled>Status</p>
+		</form>
+
+		<ul id="S_status">
+			{% for state in status %}
+
+				<li>{{state}}</li>
+
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+
+<script type="text/javascript" >
+	
+</script>
+
+{% endblock  %}

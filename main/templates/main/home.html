@@ -1,0 +1,29 @@
+{% extends "main/base.html" %}
+{% block title %}autoRelay-Home{% endblock  %}
+
+{% block content %}
+{% load static %}
+<div class="inst-container">
+	<p id="instHeader">INSTRUCTIONS</p>
+	<ul class="instText">
+		<li class="instList">Make sure you have a stable internet connection.</li>
+		<li class="instList">Make sure you are logged in to your Whatsapp web using your browser.</li>
+		<li class="instList">Make sure that your recipient’s chat is empty (clear the chat if they exists,this prevents possible errors).</li>
+		<li class="instList">Create a csv file on your computer and save it as  <b>recipients.csv</b> .</li>
+		<li class="instList">Open the csv file using your text editor (notepad,don't use MS Excel) and add the recipients’ phone numbers and messages using the format below(make sure to sorround both phone number and messages in quotes):</li>
+		<li class="instList">Save the file, click the upload recipients button and choose the file you just created.</li>
+
+		<img id="demoPic" src="{% static 'images/demo.png' %}" alt="none">
+
+		<li class="instList">Phone number and message <b>MUST</b> be separated using a comma<b>(,)</b>.Include the country code in the phone number.</li>
+		<li class="instList">After the file has been uploaded click the <a href="{% url 'send' %}">send messages</a> button.</li>
+		<li class="instList">Now leave the computer on and idle and all the messages will be sent to their recipients</li>
+		<li class="instList">It's best to run this program when you are not using your computer to avoid errors.</li>
+		<li class="instList">A slow internet connection or interference with the mouse may course errors.</li>
+		<li class="instList">It takes around 90 seconds to open whatsapp and send a message.</li>
+
+
+	</ul>
+</div>
+
+{% endblock %}

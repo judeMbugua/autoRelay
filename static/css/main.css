@@ -1,0 +1,235 @@
+html{
+    background-color: gray;
+    margin:0;
+    padding: 0;
+}
+
+nav ul{
+    list-style-type: none;
+    display:flex;
+    float: right;
+    margin-top: 1.5rem;
+    margin-right: 6rem;
+
+    
+}
+
+#logo{
+    height: 15%;
+    position: absolute;
+    margin-left: 1rem;
+
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+}
+
+.headList{
+    margin-right:15px;
+
+}
+
+.header-container{
+    background-color:lightcyan ;
+    height: 4.5rem;
+    width: 100%;
+}
+
+#headerText{
+    position: absolute;
+    margin-top: .3rem;
+    margin-left: 25rem;
+    font-size: 2rem;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+}
+
+#sloganText{
+    position: absolute;
+    margin-top: 2.5rem;
+    margin-left: 16rem;
+    font-size: 1.5rem;
+    font-family: "Encode Sans Expanded", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+.inst-container{
+    margin-top: 1rem;
+    width: 100%;
+    border-radius: 1rem;
+    height: max-content;
+    background-color: lightgray;
+    padding-block-end: 1rem;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+}
+
+#instHeader{
+    text-align: center;
+    padding-top: .5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+.instText{
+    margin-left: 1rem;
+}
+
+.instText li{
+    margin-top: .5rem;
+    font-size: 1.2rem;
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+
+.container{
+    display: inline-flex;
+}
+
+#demoPic{
+    inline-size: 70%;
+    block-size: 10%;
+    margin-top: 1rem;
+}
+
+#sendImage{
+    margin-top: .5rem;
+    border-radius: 1rem;
+    inline-size: 50%;
+}
+
+.el-container{
+    width: 38rem;
+    height: 27rem;
+    margin-top: .5rem;
+    border-radius: 1rem;
+    background-color: inherit;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    float: right;
+}
+
+#helpText{
+    position: absolute;
+    font-size: 1.5rem;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    letter-spacing: 2px;
+}
+
+
+#S_helpText{
+    position: absolute;
+    font-size: 1.5rem;
+    margin-left: 10rem;
+    margin-top: 1rem;
+    letter-spacing: 3px;
+}
+
+
+
+#id_file{
+    margin-left: 10rem;
+    margin-top: 5rem;
+    width: 15rem;
+    font-size: 1.2rem;
+
+}
+
+.errorlist{
+    visibility: collapse;
+    visibility: hidden;
+}
+
+#sendBtn{
+    margin-left: 12rem;
+    margin-top: 1rem;
+    position: absolute;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 10px;
+    border-style: none;
+}
+
+
+
+#S_sendBtn{
+    margin-left: 12rem;
+    margin-top: 4rem;
+    position: absolute;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 10px;
+    border-style: none;
+}
+
+
+
+
+
+#stopBtn{
+    margin-left: 13rem;
+    margin-top: 4rem;
+    position: absolute;
+    background-color: orangered;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 10px;
+    border-style: none;
+}
+
+
+#S_stopBtn{
+    margin-left: 13.4rem;
+    margin-top: 7.5rem;
+    position: absolute;
+    padding-block-start: .5rem;
+    text-align: center;
+    background-color: orangered;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 10px;
+    border-style: none;
+}
+
+
+
+
+#status{
+    background-color: lightgray;
+    margin-top: 5rem;
+    width: 30rem;
+    height: 10rem;
+    margin-left: 3rem;
+    padding-inline: 10px;
+    padding-block: 10px;
+    overflow-y: scroll;
+}
+
+
+
+#S_status{
+    background-color: lightgray;
+    margin-top: 11rem;
+    width: 30rem;
+    height: 10rem;
+    margin-left: 3rem;
+    padding-inline: 10px;
+    padding-block: 10px;
+    overflow-y: scroll;
+}
