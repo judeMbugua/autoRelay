@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -88,6 +89,8 @@ DATABASES = {
     }
 }
 
+
+DATABASES['default'] = dj_database_url.parse("postgres://autorelaydb_user:VQnaZudnHMSkDUevveJ760mqx2rAycX6@dpg-co78dpmn7f5s738ic7h0-a.oregon-postgres.render.com/autorelaydb")
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
