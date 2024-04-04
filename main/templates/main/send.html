@@ -10,12 +10,12 @@
 		<p id="helpText">Please upload recipients.csv file below.</p>
 		<form method="POST" enctype="multipart/form-data">
 			 {% csrf_token %} 
-			{{form}}<br>
+			{{context.form}}<br>
 			<button id="sendBtn" type="submit" name="send" value="send">Send Messages</button>
 			
 		</form>
 
-		<p id="status"></p>
+		<p id="status">{{context.msg}}</p>
 	</div>
 </div>
 

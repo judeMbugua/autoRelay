@@ -4,12 +4,57 @@ html{
     padding: 0;
 }
 
+
+.drop_{
+    position: absolute;
+    margin-left: 64rem;
+    margin-top: 1rem;
+
+}
+
+#bulkMsgHelpText1,#bulkMsgHelpText2{
+    display: none;
+
+
+}
+
+
+.dropItem1:hover + #bulkMsgHelpText1 {
+  display: block;
+  color: black;
+  position: absolute;
+  margin-left: -15rem;
+  margin-top:-.51rem;
+  background-color: lightseagreen;
+}
+
+
+.dropItem2:hover + #bulkMsgHelpText2 {
+  display: block;
+  color: black;
+  position: absolute;
+  margin-left: -15rem;
+  margin-top:-.51rem;
+  background-color: lightseagreen;
+}
+
+
+
+.dropMsg{
+
+    margin-top: -.5rem;  
+   
+
+}
+
+
+
 nav ul{
     list-style-type: none;
     display:flex;
     float: right;
     margin-top: 1.5rem;
-    margin-right: 6rem;
+    margin-right: 8rem;
 
     
 }
@@ -32,6 +77,8 @@ nav a{
 
 }
 
+
+
 .headList{
     margin-right:15px;
 
@@ -46,7 +93,7 @@ nav a{
 #headerText{
     position: absolute;
     margin-top: .3rem;
-    margin-left: 25rem;
+    margin-left: 21rem;
     font-size: 2rem;
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
@@ -57,7 +104,7 @@ nav a{
 #sloganText{
     position: absolute;
     margin-top: 2.5rem;
-    margin-left: 16rem;
+    margin-left: 13rem;
     font-size: 1.5rem;
     font-family: "Encode Sans Expanded", sans-serif;
     font-weight: 300;
@@ -116,18 +163,19 @@ nav a{
 
 .el-container{
     width: 38rem;
+    margin-left:8rem ;
     height: 27rem;
     margin-top: .5rem;
     border-radius: 1rem;
     background-color: inherit;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    float: right;
+   
 }
 
 #helpText{
     position: absolute;
     font-size: 1.5rem;
-    margin-left: 3rem;
+    margin-left: 2rem;
     margin-top: 2rem;
     letter-spacing: 2px;
 }
@@ -142,6 +190,10 @@ nav a{
 }
 
 
+/* this class is for the django created forms help text */
+.helptext{
+    display: none;
+}
 
 #id_file{
     margin-left: 10rem;
@@ -152,18 +204,25 @@ nav a{
 }
 
 .errorlist{
-    visibility: collapse;
-    visibility: hidden;
+    visibility: visible;
+    display: block;
+    text-align: center;
+    list-style-type: none;
+    margin-bottom: -1.5rem;
+    margin-top: .5rem;
+
 }
 
 #sendBtn{
     margin-left: 12rem;
     margin-top: 1rem;
     position: absolute;
+    background-color: lightgray;
     width: 8rem;
     height: 2rem;
     border-radius: 10px;
-    border-style: none;
+    cursor: pointer;
+
 }
 
 
@@ -172,10 +231,12 @@ nav a{
     margin-left: 12rem;
     margin-top: 4rem;
     position: absolute;
+    background-color: lightgray;
     width: 8rem;
     height: 2rem;
     border-radius: 10px;
     border-style: none;
+    cursor: pointer;
 }
 
 
@@ -198,13 +259,14 @@ nav a{
     margin-left: 13.4rem;
     margin-top: 7.5rem;
     position: absolute;
-    padding-block-start: .5rem;
+    padding-block-start: .2rem;
     text-align: center;
     background-color: orangered;
     width: 6rem;
     height: 2rem;
     border-radius: 10px;
     border-style: none;
+    cursor: pointer;
 }
 
 
@@ -223,13 +285,184 @@ nav a{
 
 
 
-#S_status{
+#message_input{
     background-color: lightgray;
     margin-top: 11rem;
+    width: 30rem;
+    height: 10rem;
+    margin-left: 3rem;
+    word-break: break-word;
+    padding-inline-start: 1rem;
+    padding-block-start: .5rem;
+    overflow-y: scroll;
+    display: block;
+}
+
+
+#message_output{
+    background-color: lightgray;
+    margin-top: 11rem;
+    width: 30rem;
+    height: 10rem;
+    margin-left: 3rem;
+    word-break: break-word;
+    padding-inline-start: 1rem;
+    padding-block-start: .5rem;
+    overflow-y: scroll;
+    list-style-type: none;
+    text-align: left;
+    font-family: "Inconsolata", monospace;
+    font-size: 1.1rem;
+    display: none;
+
+}
+
+
+.f-container{
+    width: 38rem;
+    margin-left:13rem ;
+    height: 27rem;
+    margin-top: .5rem;
+    border-radius: 1rem;
+    background-color: inherit;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+   
+}
+
+
+.reg-form{
+
+    background-color: inherit;
+}
+
+.reg-form  input{
+    margin-right: 5rem;
+    margin-left: 5rem;
+    width: 15rem;
+    padding-inline-start: 10px;
+    height: 2.5rem;
+    border-width:1px ;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+    margin-top: 2rem;
+}
+
+#has_acc{
+    margin-top: .5rem;
+    text-align: center;
+}
+
+#regBtn{
+    margin-left: 10rem;
+    margin-top: 10px;
+}
+
+
+.errorlist{
+    display: block;
+}
+
+#regText{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: -1.0rem;
+}
+
+
+
+.log-form{
+    float: right;
+    background-color: inherit;
+    margin-top: 2rem;
+}
+
+#signText{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#no_acc{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.log-form  input{
+    margin-right: 5rem;
+    margin-left: 5rem;
+    width: 15rem;
+    padding-inline-start: 10px;
+    height: 2.5rem;
+    border-width:1px ;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+    margin-top: 1rem;
+}
+
+
+#log_btn{
+    margin-left: 10rem;
+    margin-top: 10px;
+}
+
+
+
+.customInts-container{
+    width: 45rem;
+    height: fit-content;
+    margin-left: 36rem;
+    margin-right: -12rem;
+    margin-top: .5rem;
+    border-radius: 1rem;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+   
+   
+}
+
+
+.el-custom-container{
+    width: 35rem;
+    margin-right:-18rem ;
+    position: absolute;
+    height: 100vh;
+    margin-top: .5rem;
+    border-radius: 1rem;
+    background-color: inherit;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+   
+}
+
+#customHeader{
+    text-align: center;
+    margin-top: 10px;
+    text-align: center;
+    padding-top: .5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: underline;
+}
+
+
+#custom-textarea{
+    background-color: lightgray;
+    color: black;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 5rem;
     width: 30rem;
     height: 10rem;
     margin-left: 3rem;
     padding-inline: 10px;
     padding-block: 10px;
     overflow-y: scroll;
+    
+}
+
+
+
+#customdemoPic{
+    inline-size: 70%;
+    height: 15rem;
+    margin-top: 1rem;
 }

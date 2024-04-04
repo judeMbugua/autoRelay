@@ -1,0 +1,27 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}quiet-out{% endblock %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+
+
+<div class="login-body-container">
+
+
+    <div class="log-image-container" style="background-image: url({% static 'images/reg-cover.jpg' %})" >   
+    </div>
+
+        <div class="log-form-container">
+            <form class="logout-form" action="" method="post">
+                {% csrf_token %}
+                <p id="loggedOut_text">You have logged out,log in<a href=" {% url 'login' %} "> here</a> </p>
+            </form>
+        </div>
+
+</div>
+
+{% endblock  %}

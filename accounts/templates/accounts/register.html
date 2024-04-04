@@ -1,0 +1,31 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}autoRelay-register{% endblock %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<div class="container">
+    <img id="sendImage" src="{% static 'images/sendImage.png' %}" alt="none">
+    <div class="f-container">
+        
+            <form class="reg-form" action="" method="post">
+                <p id="regText">Create your account</p>
+                {% csrf_token %}
+                {{form}}
+                <button id="regBtn" type="submit" name="save" class="btn btn-success reg_btn">Register</button>
+                <p id="has_acc">Aready have an account? <a href="/login">Log in</a> </p>
+            </form>
+    </div>
+</div>
+
+
+
+
+
+   
+
+
+{% endblock  %}

@@ -22,7 +22,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include('main.urls')),
+    path("", include("main.urls")),
+    path("", include("accounts.urls")),
+    path("", include("django.contrib.auth.urls")), #allows us to user django's inbuild login,logout funcs
 ]
 
 

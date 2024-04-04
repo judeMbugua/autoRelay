@@ -1,0 +1,64 @@
+{% extends "main/base.html" %}
+{% block title %}autoRelay-Send Messages{% endblock  %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+	<div class="customInts-container">
+		<p id="customHeader">INSTRUCTIONS TO SEND ONE MESSAGE TO MANY RECIPIENTS</p>
+
+		<ul class="instText">
+			<li class="instList">Create a csv file and call it recipients.csv or <a download href="{{context.download_file.url}}">download</a> our file and edit it.</li>
+			<li class="instList">Make sure to include the country code in the phone number.Enter your message in the text area below the send button.</li>
+			<li class="instList">Open the file using a text editor(preferably notepad) and and the phone numbers in the format below:</li>
+
+			<img id="customdemoPic" src="{% static 'images/custome2many.jpeg' %}" alt="none">
+
+
+		</ul>
+
+	</div>
+	<div class="el-custom-container">
+		<p id="helpText">Please upload recipients.csv file below.</p>
+		<form method="POST" enctype="multipart/form-data">
+			 {% csrf_token %} 
+			{{context.form}}<br>
+			<button id="sendBtn" type="submit" name="sendToMany" value="sendToMany">Send Messages</button>
+			<textarea id="custom-textarea" >{{context.msg}}</textarea>
+			
+		</form>
+
+		
+	</div>
+</div>
+
+
+<script>
+
+sendBtn = document.getElementById('sendBtn');
+fileChoose = document.getElementById("id_file");
+
+sendBtn.addEventListener("click",sayHi);
+
+
+//making sure that user only uploads csv files
+function sayHi(){
+	if (fileChoose.files.length == 0) {
+		alert("Please choose the Recipient.csv file to continue");
+	}else{
+		var allowedExtensions = /(\.csv)$/i;
+		ext = fileChoose.value;
+		
+		if (!allowedExtensions.exec(ext)) {
+			alert("Not allowed");
+			fileChoose.value = "";
+			return false;
+		}
+		else{
+			return true;		}
+	}
+}
+</script>
+
+{% endblock  %}

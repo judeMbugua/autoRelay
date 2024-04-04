@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-w96yte2sd(u)%qlsp1*!1qws$=prk+xh9k_i=_$+jg(*$g#)y@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "main.apps.MainConfig",
-  # should go after your apps
+    "accounts.apps.AccountsConfig",
+    "crispy_forms",
+    "crispy_bootstrap3",
+
     
 
 ]
@@ -127,6 +130,11 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR,"assets")
 
 
+#to be used by crsipy forms
+CRISPY_TEMPLATE_PACK = "bootstrap3"
+
+
+
 #location of media uploaded to database;#handles the upload of media to database
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
@@ -135,3 +143,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+#Default login and logout url
+LOGIN_URL = '/login/' 
+LOGOUT_URL = '/logout/' 

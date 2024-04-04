@@ -1,0 +1,63 @@
+{% extends "main/base.html" %}
+{% block title %}autoRelay-Send Messages{% endblock  %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+	<img id="sendImage" src="{% static 'images/sendImage.png' %}" alt="none">
+	<div class="el-container">
+		<p id="S_helpText">Send Messages</p>
+		<form method="POST" enctype="multipart/form-data">
+			 {% csrf_token %} 
+			{{form}}<br>
+			<button id="S_sendBtn" type="submit" name="send" value="send">Send Messages</button>
+			<button id="S_stopBtn" name="stop" value="stop" >Stop</button>
+
+			<textarea type="text" id="message_input" name="message" placeholder="Type your message here" required></textarea>
+			<ul id="message_output" name="message">
+				{% for state in status %}
+					<li>{{state}}</li>
+				{% endfor %}
+			</ul>	
+		</form>
+
+		
+	</div>
+</div>
+
+<script type="text/javascript" >
+const stopBtn = document.getElementById('S_stopBtn');
+const sendBtn = document.getElementById('S_sendBtn');
+const textArea = document.getElementById('message_input');
+const textOutput = document.getElementById('message_output');
+
+stopBtn.addEventListener('click',stop);
+
+sendBtn.addEventListener('click',validate);
+
+
+function validate(){
+	if (textArea.value == "") {
+		alert("Please Enter the message that will be sent to your recipients!");
+		textArea.focus();
+		return false;
+	}else{
+		textArea.style.display = 'none';
+		textOutput.style.display = "block";
+	}
+}
+
+
+function stop(){
+	textArea.style.display = 'none';
+	textOutput.style.display = "block";
+	msg = document.createElement('li');
+	msg.innerHTML = "Sending messages stopped!";
+	textOutput.appendChild(msg);
+	window.stop();
+}
+
+</script>
+
+{% endblock  %}
