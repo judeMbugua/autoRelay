@@ -90,7 +90,7 @@ DATABASES = {
 }
 
 
-DATABASES['default'] = dj_database_url.parse("postgres://autorelaydb_user:VQnaZudnHMSkDUevveJ760mqx2rAycX6@dpg-co78dpmn7f5s738ic7h0-a.oregon-postgres.render.com/autorelaydb")
+#DATABASES['default'] = dj_database_url.parse("postgres://autorelaydb_user:VQnaZudnHMSkDUevveJ760mqx2rAycX6@dpg-co78dpmn7f5s738ic7h0-a.oregon-postgres.render.com/autorelaydb")
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
